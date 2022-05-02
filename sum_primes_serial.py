@@ -31,7 +31,7 @@ print( """Usage: python sum_primes.py [ncpus]
     if omitted it will be set to the number of processors in the system
 """)
 
-inputs = (100000, 100100, 100200, 100300, 100400, 100500, 100600, 100700,100000, 100100, 100200, 100300, 100400, 100500, 100600, 100700,100000, 100100, 100200, 100300, 100400, 100500, 100600, 100700)
+inputs = (100000, 100100, 100200, 100300, 100400, 100500, 100600, 100700)
 
 for n in inputs:
     start_time = time.time()

@@ -1,6 +1,7 @@
 #!/usr/bin/python
-# File: sum_primes.py
-# Author: VItalii Vanovschi
+# File: sum_primes_parallel.py
+# Original Author: VItalii Vanovschi
+# Forked by: Bipin
 # Desc: This program demonstrates parallel computations with pp module
 # It calculates the sum of prime numbers below a given integer in parallel
 # Parallel Python Software: http://www.parallelpython.com
@@ -68,7 +69,7 @@ print("Sum of primes below 100 is", result)
 start_time = time.time()
 
 # The following submits 8 jobs and then retrieves the results
-inputs = (100000, 100100, 100200, 100300, 100400, 100500, 100600, 100700,100000, 100100, 100200, 100300, 100400, 100500, 100600, 100700,100000, 100100, 100200, 100300, 100400, 100500, 100600, 100700)
+inputs = (100000, 100100, 100200, 100300, 100400, 100500, 100600, 100700)
 jobs = [(input, job_server.submit(sum_primes,(input,), (isprime,), ("math",))) for input in inputs]
 for input, job in jobs:
     print("Sum of primes below", input, "is", job())
